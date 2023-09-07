@@ -9,7 +9,7 @@ int? thirdNum = Convert.ToInt32(Console.ReadLine());
 int? max = firstNum;
 if(firstNum == secondNum && firstNum == thirdNum)
 {
-    Console.WriteLine("все числа равны");
+    Console.WriteLine($"все числа равны {max}");
 }
     else
 {

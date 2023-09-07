@@ -1,7 +1,7 @@
 ﻿// №2 Напишите программу, которая на вход принимает два числа и выдаёт, какое число
 // большее, а какое меньшее.
 Console.Write("ведите первое число: ");
-int? firstNum = Convert.ToInt32(Console.ReadLine());67
+int? firstNum = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int? secondNum = Convert.ToInt32(Console.ReadLine());
 if (firstNum < secondNum)
