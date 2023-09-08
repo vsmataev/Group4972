@@ -7,7 +7,7 @@ int? secondNum = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите третье число: ");
 int? thirdNum = Convert.ToInt32(Console.ReadLine());
 int? max = firstNum;
-if(firstNum == secondNum && firstNum == thirdNum)
+if(firstNum == secondNum && firstNum == thirdNum) // если введены одинаковые числа
 {
     Console.WriteLine($"все числа равны {max}");
 }
