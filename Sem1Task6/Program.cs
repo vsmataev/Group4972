@@ -3,6 +3,7 @@
 Console.Write("ведите число: ");
 int? Num = Convert.ToInt32(Console.ReadLine());
 if (Num % 2 == 0) // если делится на 2 дез остатка
+{
 Console.WriteLine($"число {Num} является четным");
 }
 else
