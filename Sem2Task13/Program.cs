@@ -3,28 +3,27 @@
 // заданного числа или сообщает, что третьей цифры нет.
 // * Сделать вариант для числа длиной до 10 цифр не используя char или string
 
-Console.WriteLine("Введите цисло от 1 до 9999999999"); 
- int number = int.Parse.ToArray((Console.ReadLine())?? "0");
- //int num2 = int.Parse.ToArray(number);
+Console.WriteLine("Введите число от 1 до 9999999999"); // пусть будет 7654
+ int? number = Convert.ToInt32(Console.ReadLine());
+ //int[] numbers = new int[10];
+  List<int> numbers = new List<int>();
+  int temp1 = (int)number%10;//4
+  int temp2 = (int)number / 10; //765
+  int i = (int)temp1; //4
+ bool test = (number<100);
+if (test) Console.WriteLine("Число не трехзначное");
+else if (number > 99)
+    numbers.Add(i);
+while (temp2%10==0);
+{
+temp1 /= (int)temp2%10; //5,6
+i = (int)temp1; //5,4
+temp2 /= (int)temp2/10; //76,7
+numbers.Add(i);
+temp1 = (int)temp2; //76,7
+if(i>=1);
+}
+return temp2; //7
 
-    //int[] numbers = new int[Console.ReadLine()?? "0"]; 
-    //int item = 2;
-    //int index = numbers.findIndex(2);
-
-    //Console.WriteLine(number);
-
-    int[] nums = { 1, 2, 3, 5 };
- 
-// получение элемента массива
-Console.WriteLine(nums[3]);  // 5
-
-    //int day = int.Parse(Console.ReadLine ()??"0");
-// string [] dayOfWeek = new string [7]; // создание массива dayOfWeek длинной 7
-//     dayOfWeek[0] = "Понедельник";
-//     dayOfWeek[1] = "Вторник";
-//     dayOfWeek[2] = "Среда";
-//     dayOfWeek[3] = "Четверг";
-//     dayOfWeek[4] = "Пятница";
-//     dayOfWeek[5] = "Суббота";
-//     dayOfWeek[6] = "Воскресение";
-// Console.WriteLine(dayOfWeek [day-1]);
+//return temp1*1
+Console.WriteLine(numbers.Count);
