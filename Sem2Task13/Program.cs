@@ -3,28 +3,23 @@
 // заданного числа или сообщает, что третьей цифры нет.
 // * Сделать вариант для числа длиной до 10 цифр не используя char или string
 
-Console.WriteLine("Введите число от 1 до 9999999999"); // пусть будет 7654
- int? number = Convert.ToInt32(Console.ReadLine());
- //int[] numbers = new int[10];
-  List<int> numbers = new List<int>();
-  int temp1 = (int)number%10;//4
-  int temp2 = (int)number / 10; //765
-  int i = (int)temp1; //4
- bool test = (number<100);
-if (test) Console.WriteLine("Число не трехзначное");
-else if (number > 99)
+Console.WriteLine("Введите число от 1 до 9999999999");
+ int? num = Convert.ToInt32(Console.ReadLine());
+double digit = Math.Log10((int)num); // вычисление разрядности ч/з десятичный логарифм
+digit = (int)digit;
+// проверка на трехзначность
+if(digit > 1)
 {
-    numbers.Add(i);
+    int count = 1; //счетчик
+    int res = (int)num; //переменная результата
+    while (count < digit-1) //последовательно уменьшаем число до 3-х значного
+    {
+        res = res/10;  
+        count ++;
+    }
+    Console.WriteLine($"третья цифра {res%10}"); //выводим остаток от деления
 }
-Count i;
-if (temp1%10==0)
+else
 {
-temp1 /= (int)temp2%10; //5,6
-i = (int)temp1; //5,4
-temp2 /= (int)temp2/10; //76,7
-numbers.Add(i);
-temp1 = (int)temp2; //76,7
+    Console.WriteLine($"В числе {num} нет третей цифры");
 }
-return //temp2; //7
-
-Console.WriteLine(numbers.Count);
