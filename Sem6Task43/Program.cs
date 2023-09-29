@@ -28,10 +28,13 @@ b1 = ReadData("Введите точку b1: ");
 k2 = ReadData("Введите точку k2: ");
 b2 = ReadData("Введите точку b2: ");
 
-if(k1==k2)
+if(k1==k2 && b1!=b2)
 {
 Console.WriteLine("Заданы отрезки, принадлежащие параллельным прямым");
 }
+else if(k1==k2 && b1==b2)
+Console.WriteLine("Задана одна прямая");
+Environment.Exit(0);
 
 double[] intersection = FindIntersection(k1, b1, k2, b2);
 
