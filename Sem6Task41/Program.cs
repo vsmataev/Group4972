@@ -5,7 +5,6 @@
 
 
 
-
 double[] numbers = GetNumbers();
 int positiveCount = CountPositiveNumbers(numbers);
 
@@ -37,5 +36,5 @@ double[] GetNumbers() //метод определения положительн
 
 int CountPositiveNumbers(double[] numbers) // считаем количество положительных значений
 {
-    return numbers.Count(n => n > 0);
+    return numbers.Count(n => n > 0); //лямбда выражение
 }
