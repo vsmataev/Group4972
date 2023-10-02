@@ -1,15 +1,6 @@
 ﻿// Напишите программу вычисления функции Аккермана с помощью рекурсии. 
 // Даны два неотрицательных числа m и n.
 
-int m = ReadData("Введите m: ");
-if (m > 3)
-{
-    Console.WriteLine("Предупреждение: значения m больше 3 могут привести к переполнению стека или долгому времени вычисления.");
-}
-int n = ReadData("Введите n: ");
-int result = CalculateAckermann(m, n);
-Console.WriteLine($"A({m}, {n}) = {result}");
-
 int ReadData(string line)
 {
     Console.Write(line);
@@ -36,3 +27,8 @@ int CalculateAckermann(int m, int n)
         return CalculateAckermann(m - 1, CalculateAckermann(m, n - 1));
     }
 }
+
+int m = ReadData("Предупреждение: значения m больше 3 могут привести к переполнению стека или долгому времени вычисления. \nВведите m: ");
+int n = ReadData("Введите n: ");
+int result = CalculateAckermann(m, n);
+Console.WriteLine($"A({m}, {n}) = {result}");
