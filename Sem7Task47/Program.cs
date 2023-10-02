@@ -68,3 +68,5 @@ int column = ReadData("Введите количество столбцов: ");
 double[,] arr2D = Fill2DArray(row,column,100,10); //размер массива и границы значений
 Print2DArray(arr2D);
 Print2DArrayColor(arr2D);
+
+
