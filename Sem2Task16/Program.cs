@@ -23,4 +23,4 @@ void Variant2() //разобрать позже и выбрать интерес
 }
 
 //Variant1 ();
-Variant2 ()
+Variant2 ();
